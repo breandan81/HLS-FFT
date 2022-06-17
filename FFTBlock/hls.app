@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="fftBlock" name="FFTBlock">
+<project xmlns="com.autoesl.autopilot.project" name="FFTBlock" top="fftBlock">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

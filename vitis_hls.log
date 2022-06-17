@@ -1,28 +1,167 @@
-INFO: [HLS 200-10] Running '/home/breandan/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'breandan' on host 'breandan-desktop' (Linux_x86_64 version 5.13.0-48-generic) on Thu Jun 16 09:40:33 CDT 2022
+INFO: [HLS 200-10] Running '/home/breandan/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'breandan' on host 'breandan-desktop' (Linux_x86_64 version 5.13.0-48-generic) on Fri Jun 17 09:59:40 CDT 2022
 INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
-INFO: [HLS 200-10] In directory '/home/breandan/Xilinx/DSPBlocks'
-Sourcing Tcl script '/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/csynth.tcl'
-INFO: [HLS 200-10] Opening project '/home/breandan/Xilinx/DSPBlocks/FFTBlock'.
+INFO: [HLS 200-10] In directory '/home/breandan/Xilinx/DSPBlocks/FFT'
+Sourcing Tcl script '/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project FFTBlock 
+INFO: [HLS 200-10] Opening project '/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock'.
+INFO: [HLS 200-1510] Running: set_top fftBlock 
+INFO: [HLS 200-1510] Running: add_files fftBlock.cpp 
 INFO: [HLS 200-10] Adding design file 'fftBlock.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fftBlock_tb.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'fftBlock_tb.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1'.
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1505.html
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./FFTBlock/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fftBlock fftBlock 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
 INFO: [HLS 200-10] Analyzing design file 'fftBlock.cpp' ... 
-ERROR: [HLS 214-126] An Array of user defined type 'in' in function 'fftBlock' cannot be used  as an axi slave stream or as a fifo. Use hls::stream<'in'> instead: fftBlock.cpp:8
-ERROR: [HLS 214-126] An Array of user defined type 'out' in function 'fftBlock' cannot be used  as an axi slave stream or as a fifo. Use hls::stream<'out'> instead: fftBlock.cpp:8
-Syntax check failed
-    while executing
-"source /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/csynth.tcl"
-    invoked from within
-"hls::main /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/csynth.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:565:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:631:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:810:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:877:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:934:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1063:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1093:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1126:9)
+WARNING: [HLS 207-5292] unused parameter 'data_type' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:146:77)
+WARNING: [HLS 207-5292] unused parameter 'has_nfft' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:171:65)
+WARNING: [HLS 207-5292] unused parameter 'cp_len_enable' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:184:66)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:197:68)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:361:71)
+WARNING: [HLS 207-5292] unused parameter 'has_ovflo' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:374:66)
+WARNING: [HLS 207-5292] unused parameter 'ovflo' (fftBlock.cpp:8:126)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.42 seconds. CPU system time: 0.53 seconds. Elapsed time: 5.78 seconds; current allocated memory: 463.348 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::getSch(unsigned int)' into 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:519:39)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::getDir(unsigned int)' into 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:528:31)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::getDir(unsigned int)' into 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:520:37)
+INFO: [HLS 214-131] Inlining function 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' into 'void hls::fft<param1>(hls::x_complex<ap_fixed<(((param1::input_width) + (7)) / (8)) * (8), 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<(((param1::output_width) + (7)) / (8)) * (8), (((((param1::output_width) + (7)) / (8)) * (8)) - (param1::input_width)) + (1), (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1068:2)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::setDir(bool, unsigned int)' into 'fftBlock(hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, bool, bool&)' (fftBlock.cpp:20:8)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::setSch(unsigned int, unsigned int)' into 'fftBlock(hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, bool, bool&)' (fftBlock.cpp:21:8)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::real() const' into 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator=(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> > const&)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_x_complex.h:89:0)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::imag() const' into 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator=(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> > const&)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_x_complex.h:89:0)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator=(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> > const&)' into 'void hls::fft<param1>(hls::x_complex<ap_fixed<(((param1::input_width) + (7)) / (8)) * (8), 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<(((param1::output_width) + (7)) / (8)) * (8), (((((param1::output_width) + (7)) / (8)) * (8)) - (param1::input_width)) + (1), (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1061:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'inArray.re'
+Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-142.html
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'inArray.im'
+Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-142.html
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'outArray.re'
+Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-142.html
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'outArray.im'
+Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-142.html
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_class.hls::x_complex<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> >s' into 'fftBlock(hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, bool, bool&)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.29 seconds. CPU system time: 0.35 seconds. Elapsed time: 3.63 seconds; current allocated memory: 463.977 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.977 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 480.160 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 499.895 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_1' (fftBlock.cpp:23) in function 'fftBlock' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_2' (fftBlock.cpp:30) in function 'fftBlock' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 542.363 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fftBlock' ...
+WARNING: [SYN 201-103] Legalizing function name 'fft<param1>' to 'fft_param1_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fftBlock_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.08 seconds; current allocated memory: 569.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_param1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Skip scheduling the IP block.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fftBlock_Pipeline_VITIS_LOOP_30_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_30_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fftBlock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 569.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fftBlock_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fftBlock_Pipeline_VITIS_LOOP_23_1' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fftBlock_Pipeline_VITIS_LOOP_23_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.58 seconds. CPU system time: 0 seconds. Elapsed time: 0.58 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_param1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_param1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fftBlock_Pipeline_VITIS_LOOP_30_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fftBlock_Pipeline_VITIS_LOOP_30_2' pipeline 'VITIS_LOOP_30_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fftBlock_Pipeline_VITIS_LOOP_30_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.94 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.96 seconds; current allocated memory: 569.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fftBlock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/in_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/out_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/direction' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/ovflo' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fftBlock' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'fftBlock/ovflo' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fftBlock'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 570.066 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'inArray_re_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'inArray_im_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'outArray_re_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'outArray_im_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.27 seconds; current allocated memory: 575.004 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 579.914 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fftBlock.
+INFO: [VLOG 209-307] Generating Verilog RTL for fftBlock.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12.78 seconds. CPU system time: 0.99 seconds. Elapsed time: 13.59 seconds; current allocated memory: -916.105 MB.
+INFO: [HLS 200-112] Total CPU user time: 16.06 seconds. Total CPU system time: 1.58 seconds. Total elapsed time: 15.79 seconds; peak allocated memory: 1.461 GB.

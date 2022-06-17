@@ -5,6 +5,11 @@
                 <option name="name" value="fftBlock"/>
             </pragma>
         </directive>
+        <directive functionName="fftBlock" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="fftBlock"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

@@ -1,9 +1,13 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "fftBlock",
           "label": "",
           "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/breandan\/Xilinx\/DSPBlocks\/FFT\/FFTBlock\/solution1\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -11,5 +15,21 @@
                 "value": "fftBlock"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "fftBlock",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/breandan\/Xilinx\/DSPBlocks\/FFT\/FFTBlock\/solution1\/csynth.tcl",
+          "sourceLine": "14",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "fftBlock"
+              }]
+          }
+        }
+      ]
     }]}

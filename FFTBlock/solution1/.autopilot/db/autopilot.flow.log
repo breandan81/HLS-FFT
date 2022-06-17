@@ -1,109 +1,75 @@
-INFO-FLOW: Workspace /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1 opened at Thu Jun 16 09:40:33 CDT 2022
+INFO-FLOW: Workspace /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1 opened at Fri Jun 17 09:59:40 CDT 2022
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     open_platform DefaultPlatform 
-Execute     import_lib /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
-Execute     source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
-Execute     open_platform DefaultPlatform 
-Execute     import_lib /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute             source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
-Execute             source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
-Execute     source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
-Execute     set_part xc7z010clg400-1 
-INFO-FLOW: DBG:set_part: XILINX_VIVADO=/home/breandan/Xilinx/Vivado/2020.1
-INFO-FLOW: DBG:set_part: RDI_DATADIR=/home/breandan/Xilinx/Vivado/2020.1/data:/home/breandan/Xilinx/Vitis/2020.1/data
-Execute       ap_part_info -name xc7z010clg400-1 -data single -quiet 
-DBG:HLSDevice: Trying to load device library: /home/breandan/Xilinx/Vitis/2020.1/lib/lnx64.o/librdi_hlsvwrap.so
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/breandan/Xilinx/Vivado/2020.1/data/parts/arch.xml
-Command       ap_part_info done; 1.23 sec.
-Execute       ap_part_info -name xc7z010clg400-1 -data info 
-Execute       ap_family_info -name zynq -data info 
-Execute       add_library xilinx/zynq/zynq:xc7z010:-clg400:-1 
-Execute         get_default_platform 
-Execute         ap_part_info -data single -name xc7z010-clg400-1 
-Execute         ap_part_info -name xc7z010-clg400-1 -data resources 
-Execute         config_chip_info -resource {SLICE 4400} {LUT 17600} {FF 35200} {DSP 80} {BRAM 120} {URAM 0} 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info 
-Execute         config_chip_info -speed slow 
-Execute       add_library xilinx/zynq/zynq_fpv6 
-Execute         get_default_platform 
-INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+Execute     set_part xc7z010-clg400-1 
+Execute       create_platform xc7z010-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/breandan/Xilinx/Vitis_HLS/2022.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/breandan/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+Command       create_platform done; 1.64 sec.
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-Execute       get_default_platform 
-Command     set_part done; 1.3 sec.
-Execute     ap_part_info -data single -name xc7z010clg400-1 
-Execute     ap_part_info -name xc7z010clg400-1 -data resources 
-Execute     config_chip_info -resource {SLICE 4400} {LUT 17600} {FF 35200} {DSP 80} {BRAM 120} {URAM 0} 
-Execute     ap_part_info -name xc7z010clg400-1 -data info 
-Execute     config_chip_info -speed slow 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.77 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
 Execute     get_config_interface -m_axi_alignment_byte_size 
 Execute     get_config_interface -m_axi_max_widen_bitwidth 
 Execute     get_config_interface -default_interface 
-Execute     get_config_interface -default_slave_interface 
 Execute     get_config_rtl -register_reset_num 
-Command   open_solution done; 1.46 sec.
-Execute   set_part xc7z010clg400-1 
-INFO-FLOW: DBG:set_part: XILINX_VIVADO=/home/breandan/Xilinx/Vivado/2020.1
-INFO-FLOW: DBG:set_part: RDI_DATADIR=/home/breandan/Xilinx/Vivado/2020.1/data:/home/breandan/Xilinx/Vitis/2020.1/data
-Execute     ap_part_info -name xc7z010clg400-1 -data single -quiet 
-Execute     ap_part_info -name xc7z010clg400-1 -data info 
-Execute     ap_family_info -name zynq -data info 
-Execute     add_library xilinx/zynq/zynq:xc7z010:-clg400:-1 
-Execute       get_default_platform 
-Execute       ap_part_info -data single -name xc7z010-clg400-1 
-Execute       ap_part_info -name xc7z010-clg400-1 -data resources 
-Execute       config_chip_info -resource {SLICE 4400} {LUT 17600} {FF 35200} {DSP 80} {BRAM 120} {URAM 0} 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-Execute       config_chip_info -speed slow 
-Execute     add_library xilinx/zynq/zynq_fpv6 
-Execute       get_default_platform 
+Command   open_solution done; 1.78 sec.
+Execute   set_part xc7z010-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
+Execute     create_platform xc7z010-clg400-1 -board  
+Execute     source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7z010-clg400-1 -data info 
-Execute     get_default_platform 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.16 sec.
 Execute   create_clock -period 10 -name default 
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./FFTBlock/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./FFTBlock/solution1/directives.tcl
+Execute     set_directive_top -name fftBlock fftBlock 
+INFO: [HLS 200-1510] Running: set_directive_top -name fftBlock fftBlock 
 Execute   csynth_design 
-Execute     get_config_compile -dump_cfg 
+INFO: [HLS 200-1510] Running: csynth_design 
 Execute     get_config_compile -effort 
 Execute     get_config_compile -enable_clang39 
 Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
 Execute     get_config_compile -ng 
 Execute     get_config_compile -opt_fp 
 Execute     get_config_compile -skip_cdt 
 Execute     get_config_compile -skip_syncheck 
 Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
 Execute     get_config_compile -keep_printf 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
 INFO: [HLS 200-10] Analyzing design file 'fftBlock.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       get_config_compile -pragma_strict_mode 
@@ -111,42 +77,936 @@ INFO-FLOW: Handling fftBlock.cpp as C++
 Execute       ap_part_info -name xc7z010-clg400-1 -data info 
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang.fftBlock.cpp.diag.yml -fno-limit-debug-info -gcc-toolchain /home/breandan/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E fftBlock.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /home/breandan/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/breandan/Xilinx/Vitis/2020.1/common/technology/autopilot -I /home/breandan/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp > /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang.fftBlock.cpp.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang.fftBlock.cpp.err.log 
-Command       ap_eval done; 1.09 sec.
-INFO-FLOW: Done: GCC PP 39 time: 1.1 seconds per iteration
+Execute       ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang fftBlock.cpp -foptimization-record-file=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/breandan/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -hls-platform-db-name=/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.cpp.clang.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.cpp.clang.err.log 
+Command       ap_eval done; 0.15 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
 Execute       set_directive_top fftBlock -name=fftBlock 
-INFO-FLOW: Setting directive 'TOP' name=fftBlock 
-INFO-FLOW: Setting directive 'TOP' name=fftBlock 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute       source /home/breandan/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
-INFO-FLOW: Setting directive 'TOP' name=fftBlock 
-Execute       list_core -type functional_unit 
-Execute       clang_tidy xilinx-systemc-detector /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /home/breandan/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/.systemc_flag -fix-errors /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 1.15 sec.
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -hls-platform-db-name=/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/clang.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.66 sec.
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:565:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:631:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:810:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:877:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:934:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1063:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1093:9)
+WARNING: [HLS 207-5525] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1126:9)
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/.systemc_flag -fix-errors /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.63 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /home/breandan/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/all.directive.json -fix-errors /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.91 sec.
-Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  
-INFO-FLOW: exec /home/breandan/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 1 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.9 seconds per iteration
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/all.directive.json -fix-errors /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.93 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.64 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.6 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
-Execute       clang_tidy -errorcheck xilinx-label-all-loops /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  
-Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang-tidy.fftBlock.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang-tidy.fftBlock.pp.0.cpp.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang-tidy.fftBlock.pp.0.cpp.err.log 
-Command         ap_eval done; 1.07 sec.
-Execute         source /home/breandan/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Execute           source /home/breandan/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
-Command       clang_tidy done; 1.18 sec.
-Execute       clang_tidy -errorcheck xilinx-top-parameters /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  
-Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang-tidy.fftBlock.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang-tidy.fftBlock.pp.0.cpp.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFTBlock/solution1/.autopilot/db/clang-tidy.fftBlock.pp.0.cpp.err.log 
-Command         ap_eval done; 0.6 sec.
-ERROR: [HLS 214-126] An Array of user defined type 'in' in function 'fftBlock' cannot be used  as an axi slave stream or as a fifo. Use hls::stream<'in'> instead: fftBlock.cpp:8
-ERROR: [HLS 214-126] An Array of user defined type 'out' in function 'fftBlock' cannot be used  as an axi slave stream or as a fifo. Use hls::stream<'out'> instead: fftBlock.cpp:8
-Command       clang_tidy done; error code: 2; 0.61 sec.
-Command     elaborate done; error code: 2; 6.01 sec.
-Command   csynth_design done; error code: 2; 6.01 sec.
-Command ap_source done; error code: 1; 7.55 sec.
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 1.18 sec.
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 1.26 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.6 sec.
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.bc -hls-platform-db-name=/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.clang.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.67 sec.
+WARNING: [HLS 207-5292] unused parameter 'data_type' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:146:77)
+WARNING: [HLS 207-5292] unused parameter 'has_nfft' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:171:65)
+WARNING: [HLS 207-5292] unused parameter 'cp_len_enable' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:184:66)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:197:68)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:361:71)
+WARNING: [HLS 207-5292] unused parameter 'has_ovflo' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft.h:374:66)
+WARNING: [HLS 207-5292] unused parameter 'ovflo' (fftBlock.cpp:8:126)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.42 seconds. CPU system time: 0.53 seconds. Elapsed time: 5.78 seconds; current allocated memory: 463.348 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.g.bc"  
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.g.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 2.24 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.24 sec.
+Execute       run_link_or_opt -opt -out /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fftBlock -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fftBlock -reflow-float-conversion -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 0.79 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.79 sec.
+Execute       run_link_or_opt -out /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fftBlock 
+Execute         ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+Execute       get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr /home/breandan/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fftBlock -mllvm -hls-db-dir -mllvm /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_120.000000_DSP_80.000000_FF_35200.000000_LUT_17600.000000_SLICE_4400.000000_URAM_0.000000 > /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.26 sec.
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::getSch(unsigned int)' into 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:519:39)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::getDir(unsigned int)' into 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:528:31)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::getDir(unsigned int)' into 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:520:37)
+INFO: [HLS 214-131] Inlining function 'void hls::fft_core<param1, (char)16, (char)16, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 32768, (char)1, (hls::ip_fft::type)0>(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' into 'void hls::fft<param1>(hls::x_complex<ap_fixed<(((param1::input_width) + (7)) / (8)) * (8), 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<(((param1::output_width) + (7)) / (8)) * (8), (((((param1::output_width) + (7)) / (8)) * (8)) - (param1::input_width)) + (1), (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1068:2)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::setDir(bool, unsigned int)' into 'fftBlock(hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, bool, bool&)' (fftBlock.cpp:20:8)
+INFO: [HLS 214-131] Inlining function 'hls::ip_fft::config_t<param1>::setSch(unsigned int, unsigned int)' into 'fftBlock(hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, bool, bool&)' (fftBlock.cpp:21:8)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::real() const' into 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator=(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> > const&)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_x_complex.h:89:0)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::imag() const' into 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator=(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> > const&)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_x_complex.h:89:0)
+INFO: [HLS 214-178] Inlining function 'hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator=(hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> > const&)' into 'void hls::fft<param1>(hls::x_complex<ap_fixed<(((param1::input_width) + (7)) / (8)) * (8), 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::x_complex<ap_fixed<(((param1::output_width) + (7)) / (8)) * (8), (((((param1::output_width) + (7)) / (8)) * (8)) - (param1::input_width)) + (1), (ap_q_mode)5, (ap_o_mode)3, 0> >*, hls::ip_fft::status_t<param1>*, hls::ip_fft::config_t<param1>*)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_fft_x_complex.h:1061:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'inArray.re'
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'inArray.im'
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'outArray.re'
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'outArray.im'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_class.hls::x_complex<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> >s' into 'fftBlock(hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, hls::stream<hls::x_complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >, 0>&, bool, bool&)' (/home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.29 seconds. CPU system time: 0.35 seconds. Elapsed time: 3.63 seconds; current allocated memory: 463.977 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.977 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fftBlock -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.0.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 480.160 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.1.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 499.895 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.g.1.bc to /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.1.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_1' (fftBlock.cpp:23) in function 'fftBlock' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_2' (fftBlock.cpp:30) in function 'fftBlock' automatically.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 542.363 MB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.2.bc -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 569.898 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.51 sec.
+Command     elaborate done; 9.93 sec.
+Execute     ap_eval exec zip -j /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'fftBlock' ...
+Execute       ap_set_top_model fftBlock 
+WARNING: [SYN 201-103] Legalizing function name 'fft<param1>' to 'fft_param1_s'.
+Execute       get_model_list fftBlock -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model fftBlock 
+Execute       preproc_iomode -model fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       preproc_iomode -model fft<param1> 
+Execute       preproc_iomode -model fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       get_model_list fftBlock -filter all-wo-channel 
+INFO-FLOW: Model list for configure: fftBlock_Pipeline_VITIS_LOOP_23_1 fft<param1> fftBlock_Pipeline_VITIS_LOOP_30_2 fftBlock
+INFO-FLOW: Configuring Module : fftBlock_Pipeline_VITIS_LOOP_23_1 ...
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       apply_spec_resource_limit fftBlock_Pipeline_VITIS_LOOP_23_1 
+INFO-FLOW: Configuring Module : fft<param1> ...
+Execute       set_default_model fft<param1> 
+Execute       apply_spec_resource_limit fft<param1> 
+INFO-FLOW: Configuring Module : fftBlock_Pipeline_VITIS_LOOP_30_2 ...
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       apply_spec_resource_limit fftBlock_Pipeline_VITIS_LOOP_30_2 
+INFO-FLOW: Configuring Module : fftBlock ...
+Execute       set_default_model fftBlock 
+Execute       apply_spec_resource_limit fftBlock 
+INFO-FLOW: Model list for preprocess: fftBlock_Pipeline_VITIS_LOOP_23_1 fft<param1> fftBlock_Pipeline_VITIS_LOOP_30_2 fftBlock
+INFO-FLOW: Preprocessing Module: fftBlock_Pipeline_VITIS_LOOP_23_1 ...
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       cdfg_preprocess -model fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       rtl_gen_preprocess fftBlock_Pipeline_VITIS_LOOP_23_1 
+INFO-FLOW: Preprocessing Module: fft<param1> ...
+Execute       set_default_model fft<param1> 
+Execute       cdfg_preprocess -model fft<param1> 
+Execute       rtl_gen_preprocess fft<param1> 
+INFO-FLOW: Preprocessing Module: fftBlock_Pipeline_VITIS_LOOP_30_2 ...
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       cdfg_preprocess -model fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       rtl_gen_preprocess fftBlock_Pipeline_VITIS_LOOP_30_2 
+INFO-FLOW: Preprocessing Module: fftBlock ...
+Execute       set_default_model fftBlock 
+Execute       cdfg_preprocess -model fftBlock 
+Execute       rtl_gen_preprocess fftBlock 
+INFO-FLOW: Model list for synthesis: fftBlock_Pipeline_VITIS_LOOP_23_1 fft<param1> fftBlock_Pipeline_VITIS_LOOP_30_2 fftBlock
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fftBlock_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       schedule -model fftBlock_Pipeline_VITIS_LOOP_23_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.08 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.sched.adb -f 
+INFO-FLOW: Finish scheduling fftBlock_Pipeline_VITIS_LOOP_23_1.
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       bind -model fftBlock_Pipeline_VITIS_LOOP_23_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.bind.adb -f 
+INFO-FLOW: Finish binding fftBlock_Pipeline_VITIS_LOOP_23_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_param1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft<param1> 
+Execute       schedule -model fft<param1> 
+INFO: [SCHED 204-11] Skip scheduling the IP block.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.sched.adb -f 
+INFO-FLOW: Finish scheduling fft<param1>.
+Execute       set_default_model fft<param1> 
+Execute       bind -model fft<param1> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.bind.adb -f 
+INFO-FLOW: Finish binding fft<param1>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fftBlock_Pipeline_VITIS_LOOP_30_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       schedule -model fftBlock_Pipeline_VITIS_LOOP_30_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_30_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.sched.adb -f 
+INFO-FLOW: Finish scheduling fftBlock_Pipeline_VITIS_LOOP_30_2.
+Execute       set_default_model fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       bind -model fftBlock_Pipeline_VITIS_LOOP_30_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.bind.adb -f 
+INFO-FLOW: Finish binding fftBlock_Pipeline_VITIS_LOOP_30_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fftBlock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fftBlock 
+Execute       schedule -model fftBlock 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.sched.adb -f 
+INFO-FLOW: Finish scheduling fftBlock.
+Execute       set_default_model fftBlock 
+Execute       bind -model fftBlock 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.19 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 569.898 MB.
+Execute       syn_report -verbosereport -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       syn_report done; 0.57 sec.
+Execute       db_write -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.bind.adb -f 
+INFO-FLOW: Finish binding fftBlock.
+Execute       get_model_list fftBlock -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       rtl_gen_preprocess fft<param1> 
+Execute       rtl_gen_preprocess fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       rtl_gen_preprocess fftBlock 
+INFO-FLOW: Model list for RTL generation: fftBlock_Pipeline_VITIS_LOOP_23_1 fft<param1> fftBlock_Pipeline_VITIS_LOOP_30_2 fftBlock
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fftBlock_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fftBlock_Pipeline_VITIS_LOOP_23_1 -top_prefix fftBlock_ -sub_prefix fftBlock_ -mg_file /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fftBlock_Pipeline_VITIS_LOOP_23_1' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fftBlock_Pipeline_VITIS_LOOP_23_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.58 seconds. CPU system time: 0 seconds. Elapsed time: 0.58 seconds; current allocated memory: 569.898 MB.
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fftBlock_Pipeline_VITIS_LOOP_23_1 -style xilinx -f -lang vhdl -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/vhdl/fftBlock_fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       gen_rtl fftBlock_Pipeline_VITIS_LOOP_23_1 -style xilinx -f -lang vlog -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/verilog/fftBlock_fftBlock_Pipeline_VITIS_LOOP_23_1 
+Execute       syn_report -csynth -model fftBlock_Pipeline_VITIS_LOOP_23_1 -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fftBlock_Pipeline_VITIS_LOOP_23_1_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model fftBlock_Pipeline_VITIS_LOOP_23_1 -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fftBlock_Pipeline_VITIS_LOOP_23_1_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model fftBlock_Pipeline_VITIS_LOOP_23_1 -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model fftBlock_Pipeline_VITIS_LOOP_23_1 -f -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.adb 
+Execute       db_write -model fftBlock_Pipeline_VITIS_LOOP_23_1 -bindview -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fftBlock_Pipeline_VITIS_LOOP_23_1 -p /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_param1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft<param1> -top_prefix fftBlock_ -sub_prefix fftBlock_ -mg_file /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_param1_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 569.898 MB.
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft<param1> -style xilinx -f -lang vhdl -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/vhdl/fftBlock_fft_param1_s 
+Execute       gen_rtl fft<param1> -style xilinx -f -lang vlog -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/verilog/fftBlock_fft_param1_s 
+Execute       syn_report -csynth -model fft<param1> -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fft_param1_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       syn_report done; 0.38 sec.
+Execute       syn_report -rtlxml -model fft<param1> -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fft_param1_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       syn_report done; 0.19 sec.
+Execute       syn_report -verbosereport -model fft<param1> -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       syn_report done; 0.19 sec.
+Execute       db_write -model fft<param1> -f -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.adb 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       db_write done; 0.19 sec.
+Execute       db_write -model fft<param1> -bindview -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft<param1> -p /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fftBlock_Pipeline_VITIS_LOOP_30_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fftBlock_Pipeline_VITIS_LOOP_30_2 -top_prefix fftBlock_ -sub_prefix fftBlock_ -mg_file /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fftBlock_Pipeline_VITIS_LOOP_30_2' pipeline 'VITIS_LOOP_30_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fftBlock_Pipeline_VITIS_LOOP_30_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.94 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.96 seconds; current allocated memory: 569.898 MB.
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fftBlock_Pipeline_VITIS_LOOP_30_2 -style xilinx -f -lang vhdl -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/vhdl/fftBlock_fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       gen_rtl fftBlock_Pipeline_VITIS_LOOP_30_2 -style xilinx -f -lang vlog -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/verilog/fftBlock_fftBlock_Pipeline_VITIS_LOOP_30_2 
+Execute       syn_report -csynth -model fftBlock_Pipeline_VITIS_LOOP_30_2 -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fftBlock_Pipeline_VITIS_LOOP_30_2_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model fftBlock_Pipeline_VITIS_LOOP_30_2 -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fftBlock_Pipeline_VITIS_LOOP_30_2_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model fftBlock_Pipeline_VITIS_LOOP_30_2 -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model fftBlock_Pipeline_VITIS_LOOP_30_2 -f -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.adb 
+Execute       db_write -model fftBlock_Pipeline_VITIS_LOOP_30_2 -bindview -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fftBlock_Pipeline_VITIS_LOOP_30_2 -p /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fftBlock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fftBlock -top_prefix  -sub_prefix fftBlock_ -mg_file /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/in_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/out_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/direction' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fftBlock/ovflo' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fftBlock' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'fftBlock/ovflo' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fftBlock'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 570.066 MB.
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fftBlock -istop -style xilinx -f -lang vhdl -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/vhdl/fftBlock 
+Execute       gen_rtl fftBlock -istop -style xilinx -f -lang vlog -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/verilog/fftBlock 
+Execute       syn_report -csynth -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fftBlock_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/fftBlock_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       syn_report done; 0.56 sec.
+Execute       db_write -model fftBlock -f -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.adb 
+Execute       db_write -model fftBlock -bindview -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fftBlock -p /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock 
+Execute       export_constraint_db -f -tool general -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.constraint.tcl 
+Execute       syn_report -designview -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.design.xml 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       syn_report done; 0.35 sec.
+Execute       syn_report -csynthDesign -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model fftBlock -o /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks fftBlock 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain fftBlock 
+INFO-FLOW: Model list for RTL component generation: fftBlock_Pipeline_VITIS_LOOP_23_1 fft<param1> fftBlock_Pipeline_VITIS_LOOP_30_2 fftBlock
+INFO-FLOW: Handling components in module [fftBlock_Pipeline_VITIS_LOOP_23_1] ... 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+INFO-FLOW: Found component fftBlock_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model fftBlock_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [fft_param1_s] ... 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.compgen.tcl 
+INFO-FLOW: Found component fftBlock_fft_param1_s.
+INFO-FLOW: Append model fftBlock_fft_param1_s
+INFO-FLOW: Handling components in module [fftBlock_Pipeline_VITIS_LOOP_30_2] ... 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.compgen.tcl 
+INFO-FLOW: Found component fftBlock_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model fftBlock_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [fftBlock] ... 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.compgen.tcl 
+INFO-FLOW: Found component fftBlock_fifo_w16_d32768_A.
+INFO-FLOW: Append model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: Found component fftBlock_fifo_w16_d32768_A.
+INFO-FLOW: Append model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: Found component fftBlock_fifo_w16_d32768_A.
+INFO-FLOW: Append model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: Found component fftBlock_fifo_w16_d32768_A.
+INFO-FLOW: Append model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: Found component fftBlock_regslice_both.
+INFO-FLOW: Append model fftBlock_regslice_both
+INFO-FLOW: Found component fftBlock_regslice_both.
+INFO-FLOW: Append model fftBlock_regslice_both
+INFO-FLOW: Append model fftBlock_Pipeline_VITIS_LOOP_23_1
+INFO-FLOW: Append model fft_param1_s
+INFO-FLOW: Append model fftBlock_Pipeline_VITIS_LOOP_30_2
+INFO-FLOW: Append model fftBlock
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: fftBlock_flow_control_loop_pipe_sequential_init fftBlock_fft_param1_s fftBlock_flow_control_loop_pipe_sequential_init fftBlock_fifo_w16_d32768_A fftBlock_fifo_w16_d32768_A fftBlock_fifo_w16_d32768_A fftBlock_fifo_w16_d32768_A fftBlock_regslice_both fftBlock_regslice_both fftBlock_Pipeline_VITIS_LOOP_23_1 fft_param1_s fftBlock_Pipeline_VITIS_LOOP_30_2 fftBlock
+INFO-FLOW: Generating /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model fftBlock_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model fftBlock_fft_param1_s
+INFO-FLOW: To file: write model fftBlock_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: To file: write model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: To file: write model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: To file: write model fftBlock_fifo_w16_d32768_A
+INFO-FLOW: To file: write model fftBlock_regslice_both
+INFO-FLOW: To file: write model fftBlock_regslice_both
+INFO-FLOW: To file: write model fftBlock_Pipeline_VITIS_LOOP_23_1
+INFO-FLOW: To file: write model fft_param1_s
+INFO-FLOW: To file: write model fftBlock_Pipeline_VITIS_LOOP_30_2
+INFO-FLOW: To file: write model fftBlock
+INFO-FLOW: Generating /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/breandan/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/vhdl' dstVlogDir='/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/vlog' tclDir='/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db' modelList='fftBlock_flow_control_loop_pipe_sequential_init
+fftBlock_fft_param1_s
+fftBlock_flow_control_loop_pipe_sequential_init
+fftBlock_fifo_w16_d32768_A
+fftBlock_fifo_w16_d32768_A
+fftBlock_fifo_w16_d32768_A
+fftBlock_fifo_w16_d32768_A
+fftBlock_regslice_both
+fftBlock_regslice_both
+fftBlock_Pipeline_VITIS_LOOP_23_1
+fft_param1_s
+fftBlock_Pipeline_VITIS_LOOP_30_2
+fftBlock
+' expOnly='0'
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.compgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.compgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'inArray_re_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'inArray_im_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'outArray_re_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'outArray_im_V_U(fftBlock_fifo_w16_d32768_A)' using Vivado Default RAMs.
+Command       ap_source done; 0.16 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.27 seconds; current allocated memory: 575.004 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='fftBlock_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name fft_param1_s
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute       get_config_op mul -impl 
+Execute       get_config_op mul -latency 
+Execute       get_config_op mul -precision 
+Execute       get_config_op add -impl 
+Execute       get_config_op add -latency 
+Execute       get_config_op add -precision 
+Execute       get_config_op sub -impl 
+Execute       get_config_op sub -latency 
+Execute       get_config_op sub -precision 
+Execute       get_config_op fadd -impl 
+Execute       get_config_op fadd -latency 
+Execute       get_config_op fadd -precision 
+Execute       get_config_op fsub -impl 
+Execute       get_config_op fsub -latency 
+Execute       get_config_op fsub -precision 
+Execute       get_config_op fdiv -impl 
+Execute       get_config_op fdiv -latency 
+Execute       get_config_op fdiv -precision 
+Execute       get_config_op fexp -impl 
+Execute       get_config_op fexp -latency 
+Execute       get_config_op fexp -precision 
+Execute       get_config_op flog -impl 
+Execute       get_config_op flog -latency 
+Execute       get_config_op flog -precision 
+Execute       get_config_op fmul -impl 
+Execute       get_config_op fmul -latency 
+Execute       get_config_op fmul -precision 
+Execute       get_config_op frsqrt -impl 
+Execute       get_config_op frsqrt -latency 
+Execute       get_config_op frsqrt -precision 
+Execute       get_config_op frecip -impl 
+Execute       get_config_op frecip -latency 
+Execute       get_config_op frecip -precision 
+Execute       get_config_op fsqrt -impl 
+Execute       get_config_op fsqrt -latency 
+Execute       get_config_op fsqrt -precision 
+Execute       get_config_op dadd -impl 
+Execute       get_config_op dadd -latency 
+Execute       get_config_op dadd -precision 
+Execute       get_config_op dsub -impl 
+Execute       get_config_op dsub -latency 
+Execute       get_config_op dsub -precision 
+Execute       get_config_op ddiv -impl 
+Execute       get_config_op ddiv -latency 
+Execute       get_config_op ddiv -precision 
+Execute       get_config_op dexp -impl 
+Execute       get_config_op dexp -latency 
+Execute       get_config_op dexp -precision 
+Execute       get_config_op dlog -impl 
+Execute       get_config_op dlog -latency 
+Execute       get_config_op dlog -precision 
+Execute       get_config_op dmul -impl 
+Execute       get_config_op dmul -latency 
+Execute       get_config_op dmul -precision 
+Execute       get_config_op drsqrt -impl 
+Execute       get_config_op drsqrt -latency 
+Execute       get_config_op drsqrt -precision 
+Execute       get_config_op drecip -impl 
+Execute       get_config_op drecip -latency 
+Execute       get_config_op drecip -precision 
+Execute       get_config_op dsqrt -impl 
+Execute       get_config_op dsqrt -latency 
+Execute       get_config_op dsqrt -precision 
+Execute       get_config_op hadd -impl 
+Execute       get_config_op hadd -latency 
+Execute       get_config_op hadd -precision 
+Execute       get_config_op hsub -impl 
+Execute       get_config_op hsub -latency 
+Execute       get_config_op hsub -precision 
+Execute       get_config_op hdiv -impl 
+Execute       get_config_op hdiv -latency 
+Execute       get_config_op hdiv -precision 
+Execute       get_config_op hmul -impl 
+Execute       get_config_op hmul -latency 
+Execute       get_config_op hmul -precision 
+Execute       get_config_op hsqrt -impl 
+Execute       get_config_op hsqrt -latency 
+Execute       get_config_op hsqrt -precision 
+Execute       get_config_op facc -impl 
+Execute       get_config_op facc -latency 
+Execute       get_config_op facc -precision 
+Execute       get_config_op fmacc -impl 
+Execute       get_config_op fmacc -latency 
+Execute       get_config_op fmacc -precision 
+Execute       get_config_op fmadd -impl 
+Execute       get_config_op fmadd -latency 
+Execute       get_config_op fmadd -precision 
+Execute       get_config_storage fifo -auto_srl_max_bits 
+Execute       get_config_storage fifo -auto_srl_max_depth 
+Execute       get_config_storage fifo -impl 
+Execute       get_solution -flow_target 
+Execute       get_config_array_partition -complete_threshold 
+Execute       get_config_array_partition -throughput_driven 
+Execute       get_config_compile -enable_auto_rewind 
+Execute       get_config_compile -ignore_long_run_time 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_compile -no_signed_zeros 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -unsafe_math_optimizations 
+Execute       get_config_dataflow -default_channel 
+Execute       get_config_dataflow -disable_fifo_sizing_opt 
+Execute       get_config_dataflow -fifo_depth 
+Execute       get_config_dataflow -override_user_fifo_depth 
+Execute       get_config_dataflow -scalar_fifo_depth 
+Execute       get_config_dataflow -start_fifo_depth 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_dataflow -strict_stable_sync 
+Execute       get_config_dataflow -task_level_fifo_depth 
+Execute       get_config_debug -directory 
+Execute       get_config_debug -enable 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_max_timing_paths 
+Execute       get_config_export -vivado_optimization_level 
+Execute       get_config_export -vivado_pblock 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_export -vivado_report_level 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_interface -clock_enable 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_addr64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_buffer_impl 
+Execute       get_config_interface -m_axi_conservative_mode 
+Execute       get_config_interface -m_axi_flush_mode 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -register_io 
+Execute       get_config_interface -s_axilite_auto_restart_counter 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_status_regs 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -header 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -mult_keep_attribute 
+Execute       get_config_rtl -register_all_io 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -reset 
+Execute       get_config_rtl -reset_async 
+Execute       get_config_rtl -reset_level 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='fftBlock_flow_control_loop_pipe_sequential_init
+fftBlock_fft_param1_s
+fftBlock_flow_control_loop_pipe_sequential_init
+fftBlock_fifo_w16_d32768_A
+fftBlock_fifo_w16_d32768_A
+fftBlock_fifo_w16_d32768_A
+fftBlock_fifo_w16_d32768_A
+fftBlock_regslice_both
+fftBlock_regslice_both
+fftBlock_Pipeline_VITIS_LOOP_23_1
+fft_param1_s
+fftBlock_Pipeline_VITIS_LOOP_30_2
+fftBlock
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.tbgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.rtl_wrap.cfg.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_23_1.tbgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fft_param1_s.tbgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock_Pipeline_VITIS_LOOP_30_2.tbgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.tbgen.tcl 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/fftBlock.constraint.tcl 
+Execute       sc_get_clocks fftBlock 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+Execute       source /home/breandan/Xilinx/DSPBlocks/FFT/FFTBlock/solution1/impl/misc/fftBlock_fft_param1_s_core_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST fftBlock MODULE2INSTS {fftBlock fftBlock fftBlock_Pipeline_VITIS_LOOP_23_1 grp_fftBlock_Pipeline_VITIS_LOOP_23_1_fu_98 fft_param1_s grp_fft_param1_s_fu_106 fftBlock_Pipeline_VITIS_LOOP_30_2 grp_fftBlock_Pipeline_VITIS_LOOP_30_2_fu_117} INST2MODULE {fftBlock fftBlock grp_fftBlock_Pipeline_VITIS_LOOP_23_1_fu_98 fftBlock_Pipeline_VITIS_LOOP_23_1 grp_fft_param1_s_fu_106 fft_param1_s grp_fftBlock_Pipeline_VITIS_LOOP_30_2_fu_117 fftBlock_Pipeline_VITIS_LOOP_30_2} INSTDATA {fftBlock {DEPTH 1 CHILDREN {grp_fftBlock_Pipeline_VITIS_LOOP_23_1_fu_98 grp_fft_param1_s_fu_106 grp_fftBlock_Pipeline_VITIS_LOOP_30_2_fu_117}} grp_fftBlock_Pipeline_VITIS_LOOP_23_1_fu_98 {DEPTH 2 CHILDREN {}} grp_fft_param1_s_fu_106 {DEPTH 2 CHILDREN {}} grp_fftBlock_Pipeline_VITIS_LOOP_30_2_fu_117 {DEPTH 2 CHILDREN {}}} MODULEDATA {fftBlock_Pipeline_VITIS_LOOP_23_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln23_fu_88_p2 SOURCE fftBlock.cpp:23 VARIABLE add_ln23 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} fftBlock_Pipeline_VITIS_LOOP_30_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_fu_83_p2 SOURCE fftBlock.cpp:30 VARIABLE add_ln30 LOOP VITIS_LOOP_30_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} fftBlock {BINDINFO {{BINDTYPE storage ID {} IMPL memory LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME inArray_re_V_fifo_U SOURCE fftBlock.cpp:14 VARIABLE inArray_re_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 32 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL memory LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME inArray_im_V_fifo_U SOURCE fftBlock.cpp:14 VARIABLE inArray_im_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 32 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL memory LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME outArray_re_V_fifo_U SOURCE fftBlock.cpp:16 VARIABLE outArray_re_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 32 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL memory LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME outArray_im_V_fifo_U SOURCE fftBlock.cpp:16 VARIABLE outArray_im_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 32 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 21 BRAM 159 URAM 0}} fft_param1_s {AREA {DSP 21 BRAM 31 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 579.914 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fftBlock.
+INFO: [VLOG 209-307] Generating Verilog RTL for fftBlock.
+Execute       syn_report -model fftBlock -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command     autosyn done; 3.6 sec.
+Command   csynth_design done; 13.59 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12.78 seconds. CPU system time: 0.99 seconds. Elapsed time: 13.59 seconds; current allocated memory: -916.105 MB.
+Command ap_source done; 15.54 sec.
 Execute cleanup_all 

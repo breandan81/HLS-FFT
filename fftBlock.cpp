@@ -5,14 +5,30 @@
 
 
 
-void fftBlock(cmpxDataIn in[FFT_LENGTH], cmpxDataOut out[FFT_LENGTH], bool direction, bool &ovflo)
+void fftBlock(cmpxDataInStream &in, cmpxDataOutStream &out, bool direction, bool &ovflo)
 {
-#pragma HLS INTERFACE depth=FFT_LENGTH port=in
+
 #pragma HLS INTERFACE axis register_mode=both register port=in
 #pragma HLS INTERFACE axis register_mode=both register port=out
-config_t fft_config;
-status_t fft_status;
 
+cmpxDataIn inArray[FFT_LENGTH];
+#pragma HLS STREAM variable=inArray
+cmpxDataOut outArray[FFT_LENGTH];
+#pragma HLS STREAM variable=outArray
+config_t config;
+status_t status;
+config.setDir(direction);
+config.setSch(CONSERVATIVE_SCH_1024);
 
-hls::fft<param1>(in, out, &fft_status, &fft_config);
+for (int i = 0; i < FFT_LENGTH; i++)
+{
+	in >> inArray[i];
+}
+
+hls::fft<param1>(inArray, outArray, &status, &config);
+
+for (int i = 0; i < FFT_LENGTH; i++)
+{
+	out << outArray[i];
+}
 }
