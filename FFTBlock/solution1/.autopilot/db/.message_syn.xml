@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fftBlock.cpp&apos; ..." resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-126]" key="HLS 214-126" tag="" content="An Array of user defined type &apos;in&apos; in function &apos;fftBlock&apos; cannot be used  as an axi slave stream or as a fifo. Use hls::stream&lt;&apos;in&apos;&gt; instead: fftBlock.cpp:8" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-126]" key="HLS 214-126" tag="" content="An Array of user defined type &apos;out&apos; in function &apos;fftBlock&apos; cannot be used  as an axi slave stream or as a fifo. Use hls::stream&lt;&apos;out&apos;&gt; instead: fftBlock.cpp:8" resolution=""/>
+</Messages>
